@@ -1,15 +1,16 @@
 from flask import Flask , render_template , url_for
 
 app = Flask(__name__)
+title = ["Главная"]
 
 @app.route("/")
 @app.route("/home")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title = "Главная страничка")
 
 @app.route("/pc")
 def pc():
-    return render_template("pc.html")
+    return render_template("pc.html", title = "Главная страничка")
 
 @app.route("/soft")
 def soft():
